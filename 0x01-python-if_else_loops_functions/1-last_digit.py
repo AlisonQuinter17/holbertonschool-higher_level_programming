@@ -6,7 +6,7 @@ lastd = ll[-1:]
 if int(lastd) == 0:
     print("Last digit of {} is {} and is 0".format(number, int(lastd)))
 elif number < 0:
-    lastd = -1*int(lastd)
+    lastd = -1 * int(lastd)
     print("Last digit of {} is {} and is less than 6 and not 0"
           .format(number, lastd))
 else:
@@ -15,4 +15,4 @@ else:
               .format(number, int(lastd)))
     else:
         print("Last digit of {} is {} and is less than 6 and not 0"
-              .format(number, int(lastd)))
+              .format(number, lastd))
