@@ -11,6 +11,6 @@ elif number < 0:
 else:
     print("Last digit of {} is {} and is ".format(number, int(lastd)), end='')
     if int(lastd) > 5:
-        print('8greater than 5')
+        print('greater than 5')
     else:
-        print('less than 6 and not 0')
+        print('8less than 6 and not 0')
