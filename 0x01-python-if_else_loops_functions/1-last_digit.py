@@ -7,12 +7,11 @@ if int(lastd) == 0:
     print("Last digit of {} is {} and is 0".format(number, int(lastd)))
 elif number < 0:
     lastd = -1 * int(lastd)
-    print("Last digit of {} is {} and is less than 6 and not 0"\
+    print("Last digit of {} is {} and is less than 6 and not 0"
           .format(number, lastd))
 else:
+    print("Last digit of {} is {} and is ".format(number, lastd), end="")
     if int(lastd) > 5:
-        print("Last digit of {} is {} and is greater than 5"\
-              .format(number, lastd))
+        print("greater than 5")
     else:
-        print("Last digit of {} is {} and is less than 6 and not 0"\
-              .format(number, lastd))
+        print("less than 6 and not 0")
