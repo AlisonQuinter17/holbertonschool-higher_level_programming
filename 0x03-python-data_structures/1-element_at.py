@@ -5,7 +5,7 @@ def element_at(my_list, idx):
         return (None)
     for run in my_list:
         i = i + 1
-        if run == idx:
-            return run + 1
+        if run == idx + 1:
+            return run
     if idx > i - 1:
         return (None)
