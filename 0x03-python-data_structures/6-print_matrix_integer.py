@@ -4,7 +4,7 @@ def print_matrix_integer(matrix=[[]]):
         count = 0
         for column in files:
             count = count + 1
-            print("{}".format(column), end="")
+            print("{:d}".format(column), end="")
             if count != len(files):
                 print(" ", end="")
         print("")
