@@ -11,10 +11,8 @@ int is_palindrome(listint_t **head)
 	listint_t *run1, *run2;
 	int i = 0, count = 0, j = 0;
 
-	if (!*head && !head)
-	{
+	if (head == NULL || *head == NULL)
 		return (1);
-	}
 	run1 = *head, run2 = *head;
 	while (run2)
 	{
