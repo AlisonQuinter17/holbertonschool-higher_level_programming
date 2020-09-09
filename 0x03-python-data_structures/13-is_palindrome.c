@@ -8,32 +8,25 @@
  **/
 int is_palindrome(listint_t **head)
 {
-	listint_t *run1, *run2;
-	int i = 0, count = 0, j = 0;
+	listint_t *run2 = *head;
+	int i = 0, z = 0, list[1024];
 
 	if (head == NULL || *head == NULL)
+	{
 		return (1);
-	run1 = *head, run2 = *head;
+	}
+
 	while (run2)
 	{
+		list[i] = run2->n;
 		run2 = run2->next;
-		count++;
+		i++;
 	}
-	for (i = (count / 2); i >= 0; i--)
+	for (; i > 0; i--)
 	{
-		run2 = *head;
-		j = count - 1;
-		while (j > 0)
-		{
-			run2 = run2->next;
-			j--;
-		}
-		if (run1->n != run2->n)
-		{
+		if (list[z] != list[i - 1])
 			return (0);
-		}
-		run1 = run1->next;
-		count--;
+		z++;
 	}
 	return (1);
 }
