@@ -7,12 +7,12 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             a = my_list_1[run] / my_list_2[run]
         except (IndexError):
-                print("Out of range")
+            print("out of range")
         except (ZeroDivisionError):
-                print("division by 0")
+            print("division by 0")
         except (TypeError):
-                print("wrong type")
+            print("wrong type")
         finally:
-                ar.append(a)
-                run += 1
+            ar.append(a)
+            run += 1
     return(ar)
