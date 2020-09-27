@@ -1,5 +1,5 @@
-#!/usr/bin/python3 
-"""This module contain matrix_divided method.""" 
+#!/usr/bin/python3
+"""This module contain matrix_divided method."""
 
 
 def matrix_divided(matrix, div):
