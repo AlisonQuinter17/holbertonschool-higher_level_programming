@@ -5,11 +5,11 @@
 def say_my_name(first_name, last_name=""):
     """
     Args:
-        first_name: It´s a list of lists of integers or floats.
-        last_name: Number by which the matrix will be divided.
+        first_name: The string first name.
+        last_name: The string last name.
 
     Raise:
-        - TypeError if matrix are not integers or floats.
+        - TypeError if first_name or last_name are not strings.
 
     """
     if not isinstance(first_name, str):
