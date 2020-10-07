@@ -6,7 +6,7 @@ def read_lines(filename="", nb_lines=0):
     """This function reads n lines of a text file."""
     with open(filename, "r", encoding="utf-8") as f:
         if nb_lines <= 0:
-            print(f.readlines(), end="")
+            print(f.read(), end="")
 
         else:
             x = 0
@@ -14,3 +14,6 @@ def read_lines(filename="", nb_lines=0):
                 x = x + 1
                 if x <= nb_lines:
                     print(i, end="")
+                nb_lines -= 1
+                if nb_lines <= 0:
+                    break
