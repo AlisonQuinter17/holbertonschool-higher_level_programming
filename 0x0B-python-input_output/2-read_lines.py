@@ -9,11 +9,7 @@ def read_lines(filename="", nb_lines=0):
             print(f.read(), end="")
 
         else:
-            x = 0
-            for i in f:
-                x = x + 1
-                if x <= nb_lines:
-                    print(i, end="")
-                nb_lines -= 1
-                if nb_lines <= 0:
-                    break
+            i = f.readlines()[0: nb_lines]
+
+            for x in i:
+                print(x, end="")
