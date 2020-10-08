@@ -2,19 +2,23 @@
 """Method for pascal_triangle function."""
 
 
-def pascal_triangle(row):
+def pascal_triangle(n):
     """The Pascal Triangle function."""
-    if row <= 0:
+    if n <= 0:
         return []
-    elif row == 1:
+    
+    elif n == 1:
         return [[1]]
-    result = [[1]]
-    while len(result) != row:
-        last_row = result[-1]
-        new_row = [1]
-        for i in range(len(last_row) - 1):
-            new_row.append(last_row[i] + last_row[i + 1])
-        new_row += [1]
-        result.append(new_row)
-
-    return result
+    
+    container = [[1]]
+    
+    while len(container) != n:
+        last = container[-1]
+        extreme = [1]
+        
+        for num in range(len(last) - 1):
+            extreme.append(last[num] + last[num + 1])
+            
+        extreme += [1]
+        container.append(extreme)
+    return container
