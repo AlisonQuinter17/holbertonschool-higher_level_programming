@@ -2,7 +2,7 @@
 """Method for pascal_triangle function."""
 
 
-def pascal_triangle(n):
+def pascal_triangle(row):
     """The Pascal Triangle function."""
     if row <= 0:
         return []
