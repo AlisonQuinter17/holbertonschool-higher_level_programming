@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Module for Base superclass."""
+from os import path
 import json
+import csv
 
 
 class Base:
@@ -81,7 +83,6 @@ class Base:
         This method determine if the file exist and returns
         a list of instances(objects) with the id.
         """
-        from os import path
         json_file = cls.__name__ + ".json"
         empty_list = []
 
@@ -91,3 +92,33 @@ class Base:
             for element in dictionary:
                 empty_list.append(cls.create(**element))
         return empty_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """This method save to CSV file."""
+        csv_file = cls.__name__ + ".csv"
+
+        for run in list_objs:
+            _dict = run.to_dictionary()
+        k = _dict.keys()
+
+        with open(csv_file, "w", newline="") as f:
+            writer = csv.DictWriter(f, k)
+            writer.writeheader()
+            for i in list_objs:
+                writer.writerow(i.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """This method loads and reads a CSV file."""
+        csv_file = cls.__name__ + ".csv"
+        empty_list = []
+
+        if path.isfile(csv_file):
+            with open(csv_file, "r", newline="") as f:
+                reader = csv.DictReader(f)
+                for dictionary in reader:
+                    for key, value in dictionary.items():
+                        dictionary[key] = int(value)
+                    empty_list.append(cls.create(**dictionary))
+            return empty_list
