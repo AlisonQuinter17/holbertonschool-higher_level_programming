@@ -133,10 +133,10 @@ class Base:
         sammy = turtle.Turtle()
 
         for walk in list_rectangles + list_squares:
-            Co = random.random()
-            lo = random.random()
             r = random.random()
-            sammy.color(Co, lo, r)
+            g = random.random()
+            b = random.random()
+            sammy.color(r, g, b)
             sammy.speed(1.5)
             sammy.pensize(1)
             sammy.begin_fill()
