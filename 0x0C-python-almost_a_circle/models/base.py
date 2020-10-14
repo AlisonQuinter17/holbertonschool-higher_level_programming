@@ -3,6 +3,8 @@
 from os import path
 import json
 import csv
+import turtle
+import random
 
 
 class Base:
@@ -122,3 +124,37 @@ class Base:
                         dictionary[key] = int(value)
                     empty_list.append(cls.create(**dictionary))
             return empty_list
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """This method draws all the Rectangles and Squares."""
+        turtle.Screen()
+        turtle.bgcolor("#000C23")
+        sammy = turtle.Turtle()
+
+        for walk in list_rectangles + list_squares:
+            Co = random.random()
+            lo = random.random()
+            r = random.random()
+            sammy.color(Co, lo, r)
+            sammy.speed(1.5)
+            sammy.pensize(1)
+            sammy.begin_fill()
+            sammy.goto(walk.x, walk.y)
+            sammy.pendown()
+            sammy.backward(walk.width)
+            sammy.pensize(2)
+            sammy.right(90)
+            sammy.backward(walk.height)
+            sammy.pensize(3)
+            sammy.right(90)
+            sammy.backward(walk.width)
+            sammy.pensize(4)
+            sammy.right(90)
+            sammy.backward(walk.height)
+            sammy.pensize(5)
+            sammy.right(90)
+            sammy.penup()
+            sammy.end_fill()
+
+        turtle.exitonclick()
