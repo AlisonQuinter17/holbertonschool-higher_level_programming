@@ -21,7 +21,6 @@ if __name__ == "__main__":
 
     list_of_tuples = cursor.fetchall()
     """Fetches all rows of a query result set and returns a list of tuples."""
-    
     for _tuple in list_of_tuples:
         print(_tuple)
 
