@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""List all states with a name starting with upper N."""
+"""
+Takes in an argument and displays all values in the states
+table of hbtn_0e_0_usa where name matches the argument.
+"""
 
 import MySQLdb
 from sys import argv
