@@ -18,6 +18,7 @@ if __name__ == "__main__":
     cursor.execute(upper)
     list_of_tuples = cursor.fetchall()
     for _tuple in list_of_tuples:
+        if _tuple[1][0] == 'N':
             print(_tuple)
 
     cursor.close()
