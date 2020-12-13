@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """List all states from the database."""
 
 import MySQLdb
@@ -9,7 +9,7 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3],
                          host="localhost",
-                         port="3306")
+                         port=3306)
     """Connect to a MySQL server."""
 
     cursor = db.cursor()
