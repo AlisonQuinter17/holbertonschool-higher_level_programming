@@ -1,11 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/nodejs
 // Create a sentence concat.
 
-if (process.argv[3]) {
-  sentence = process.argv[2].concat(' is ', process.argv[3]);
-} else if (process.argv[2]) {
-  sentence = process.argv[2].concat(' is undefined');
-} else {
-  sentence = 'undefined is undefined';
-}
-console.log(sentence);
+console.log(process.argv[2] + ' is ' + process.argv[3]);
