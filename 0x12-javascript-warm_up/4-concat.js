@@ -1,4 +1,4 @@
-#!/usr/bin/nodejs
+#!/usr/bin/node
 // Create a sentence concat.
 
 if (process.argv[3]) {
