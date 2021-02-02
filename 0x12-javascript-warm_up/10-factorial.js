@@ -4,6 +4,9 @@
 function factorial (n) {
   let total = 1;
   let i = 1;
+  if (!n) {
+    return 1;
+  }
   while (i < n) {
     total *= i;
     i++;
