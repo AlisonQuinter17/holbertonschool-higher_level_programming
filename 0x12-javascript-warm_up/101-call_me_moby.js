@@ -1,4 +1,4 @@
-#!/usr/bin/nodejs
+#!/usr/bin/node
 // executes x times a function.
 
 function callMeMoby (x, thefunction) {
