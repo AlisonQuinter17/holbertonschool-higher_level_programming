@@ -7,4 +7,4 @@ function callMeMoby (x, thefunction) {
   }
 }
 
-module.export = {callMeMoby: callMeMoby};
+module.exports = {callMeMoby: callMeMoby};
