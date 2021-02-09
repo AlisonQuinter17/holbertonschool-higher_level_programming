@@ -5,6 +5,7 @@ const info = {
     url: process.argv[2],
     method: 'GET'
 };
-request(info, (response) => {
+request(info, (err, response) => {
+    if (err) throw err;
     console.log('code:', response.statusCode);
 });
