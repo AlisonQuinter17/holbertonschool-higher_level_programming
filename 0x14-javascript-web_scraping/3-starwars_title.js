@@ -8,7 +8,7 @@ const info = {
   url: `https://swapi.co/api/films/${process.argv[2]}/`,
   method: 'GET'
 };
-request(info, function (error, response, body) {
+request(info, (error, response, body) => {
   if (error) throw error;
   console.log(JSON.parse(body).title);
 });
