@@ -9,8 +9,6 @@ const info = {
   method: 'GET'
 };
 request(info, function (error, response, body) {
-  if (error) {
-    console.log(error);
-  }
-  console.log(JSON.parse(body).title);
+  if (error) console.log(error);
+  else console.log(JSON.parse(body).title);
 });
