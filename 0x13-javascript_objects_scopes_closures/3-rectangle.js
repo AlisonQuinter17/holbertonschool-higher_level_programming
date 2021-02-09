@@ -9,7 +9,7 @@ module.exports = class rectangle {
   }
 
   print () {
-    for (; this.height; --this.height) {
+    for (; this.height; this.height--) {
       console.log('X'.repeat(this.width));
     }
   }
