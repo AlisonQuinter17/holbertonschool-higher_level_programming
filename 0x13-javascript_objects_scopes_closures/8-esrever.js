@@ -1,13 +1,9 @@
 #!/usr/bin/nodejs
 // Returns the reversed version of a list.
 exports.esrever = function (list) {
-  emptylist = [];
-  let i = 0;
-  while (list[i]) {
-    i++;
+  reversedlist = [];
+  for (j = list.lenght - 1; j >= 0; j--) {
+    reversedlist.push(list[j]);
   }
-  for (j = i; list[j]; j--) {
-    emptylist.push(list[j]);
-  }
-  return (emptylist);
+  return (reversedlist);
 };
