@@ -4,11 +4,7 @@
   the episode number matches a given integer.
 */
 const request = require('request');
-const info = {
-  url: `http://swapi.co/api/films/${process.argv[2]}/`,
-  method: 'GET'
-};
-request(info, function (error, response, body) {
+request.get(`http://swapi.co/api/films/${process.argv[2]}/`, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
