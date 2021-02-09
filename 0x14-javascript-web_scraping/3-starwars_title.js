@@ -5,10 +5,10 @@
 */
 const request = require('request');
 const info = {
-  url: `https://swapi-api.hbtn.io/api/films/${process.argv[2]}/`,
+  url: `http://swapi.co/api/films/${process.argv[2]}/`,
   method: 'GET'
 };
-request.get(info, (error, response, body) => {
+request(info, (error, response, body) => {
   if (error) throw error;
   console.log(JSON.parse(body).title);
 });
