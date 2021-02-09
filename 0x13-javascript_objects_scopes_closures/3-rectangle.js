@@ -1,6 +1,6 @@
 #!/usr/bin/nodejs
 // Print the rectangle.
-module.exports = class rectangle {
+module.exports = class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
       this.width = w;
@@ -9,9 +9,8 @@ module.exports = class rectangle {
   }
 
   print () {
-    while (this.height) {
+    for (; this.height; this.height--) {
       console.log('X'.repeat(this.width));
-      this.height--;
     }
   }
 };
