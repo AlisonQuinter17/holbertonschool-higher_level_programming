@@ -9,9 +9,6 @@ const info = {
   method: 'GET'
 };
 request(info, function (error, response, body) {
-  try {
-    console.log(JSON.parse(body).title);
-  } catch (error) {
-    console.log(error);
-  }
+  if (error) throw error;
+  console.log(JSON.parse(body).title);
 });
