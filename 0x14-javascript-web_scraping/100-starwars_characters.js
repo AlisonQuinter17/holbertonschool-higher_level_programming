@@ -11,7 +11,7 @@ request(url, 'utf8', (error, response, body) => {
         else {
           console.log(JSON.parse(body).name);
         }
-      }))
+      }));
     }
   }
 });
