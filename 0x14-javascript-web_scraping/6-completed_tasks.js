@@ -7,7 +7,7 @@ request(process.argv[2], (error, response, body) => {
     const d = {};
     let total = 0;
     for (const task of JSON.parse(body)) {
-      if (d[task.userId] (task.completed) ? d[task.userId]++ : d[task.userId] = 1);
+      if (task.completed) d[task.userId] ? d[task.userId]++ : d[task.userId] = 1;
    }
    console.log(d);
   }
