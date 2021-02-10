@@ -7,7 +7,7 @@ request(process.argv[2], (error, response, body) => {
     const d = {};
     for (const t of JSON.parse(body)) {
       if (t.completed) d[t.userId] ? d[t.userId]++ : d[t.userId] = 1;
-   }
-   console.log(d);
+    }
+    console.log(d);
   }
 });
