@@ -6,12 +6,12 @@ request(url, 'utf8', (error, response, body) => {
   if (error) throw error;
   else {
     for (const t of JSON.parse(body).characters) {
-      for (const i of request(i, 'utf8', (error, response, body) => {
+      request(t, 'utf8', (error, response, body) => {
         if (error) throw error;
         else {
           console.log(JSON.parse(body).name);
         }
-      }));
+      });
     }
   }
 });
